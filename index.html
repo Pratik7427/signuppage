@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Merriweather&family=Open+Sans&family=Oswald&family=Pacifico&family=Sacramento&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+
+
+    <div class="container">
+        <nav>
+            <a href="" class="register">Register</a>
+            <div class="navbar">
+
+                <i class="fa fa-facebook-f" style="font-size:24px"></i>
+                <i class="fa fa-twitter" style="font-size:24px"></i>
+                <i class="fa fa-google" style="font-size:24px"></i>
+                <i class="fa fa-skype" style="font-size:24px"></i>
+
+            </div>
+        </nav>
+        <div class="flexi">
+
+            <div class="container2">
+                <center>
+                    <h2>Bootstrap <span class="font">Registration Form</span></h2>
+                </center>
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat natus suscipit facere fugit illum
+                    architecto optio quae pariatur, eveniet odit maiores accusantium saepe reiciendis sint perferendis
+                    ut neque culpa. Ex.
+                    Earum dolore
+                    dolore
+                </p>
+                <center>
+                    <button class="sign">Sign In</button>
+                    <button class="login">Updates</button>
+                </center>
+            </div>
+
+
+            <div class="formContainer">
+                <h1 style="text-align: center;">Sign up</h1>
+                <form action="/#">
+
+                    <div class="form-field">
+                        <ul>
+                            <li> <img id="blah" src="https://www.w3schools.com/howto/img_avatar.png" alt="none" /></li>
+                            <li>
+                                <center><label for="imgInp" class="upload-btn">Upload Here</label></center>
+                            </li>
+                        </ul>
+                        <input accept="image/*" type='file' id="imgInp" class="fileUpload" />
+
+                        <!--  -->
+
+
+                    </div>
+
+                    <br>
+
+                    <div>
+
+                        <input type="text" id="username" name="username" placeholder="Username" class="forwhite"
+                            required>
+
+                    </div>
+                    <br>
+                    <div>
+
+                        <input type="email" id="email" name="email" class="forwhite" placeholder="Email" required>
+                    </div>
+                    <br>
+
+                    <div>
+
+                        <input maxlength="10"
+                            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                            onkeydown="javascript: return event.keyCode == 69 ? false : true" type="number" id="number"
+                            class="forwhite" name="number" placeholder="Phone Number" required>
+                    </div>
+                    <br>
+
+
+                    <div>
+
+                        <input type="password" class="forwhite" id="password-field" name="password"
+                            placeholder="Password" onkeyup="chang(this)" required>
+                        <i id="pass-status" class="fa fa-eye" aria-hidden="true" onClick="viewPassword()"></i>
+
+                    </div>
+                    <br>
+                    <div>
+
+                        <input type="password" id="confirm" class="forwhite" name="password" onkeyup="change(this)"
+                            placeholder="Confirm Password" required>
+                        <i id="pass-status1" class="fa fa-eye" aria-hidden="true" onClick="viewConfirmPassword()"></i>
+                        <center>
+                            <p class="show"></p>
+                        </center>
+
+
+                    </div>
+                    <center>
+
+
+                        <button onClick="func()">Sign Up</button>
+                    </center>
+
+
+
+
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+
+
+</body>
+<script src="app.js"></script>
+<script>
+    imgInp.onchange=evt => {
+        const [file]=imgInp.files
+        if (file) {
+            blah.src=URL.createObjectURL(file)
+        }
+    }
+</script>
+
+
+</html>
